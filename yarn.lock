@@ -1095,10 +1095,10 @@
     exec-sh "^0.3.2"
     minimist "^1.2.0"
 
-"@expo/config-plugins@1.0.24":
-  version "1.0.24"
-  resolved "https://registry.yarnpkg.com/@expo/config-plugins/-/config-plugins-1.0.24.tgz#d04353500ca4ce6f6eb5f7058ac63e6f09e43486"
-  integrity sha512-DB4CgkeZEKG2DWC0GzbLSHuWlxWZ6d3wE95Cjy6DOyR60cFyxo+1eriaxLaBCApX3KrFAdxJFsxvwK9zbCtuzQ==
+"@expo/config-plugins@1.0.25":
+  version "1.0.25"
+  resolved "https://registry.yarnpkg.com/@expo/config-plugins/-/config-plugins-1.0.25.tgz#a9dc4a00a49d8360b5ce85ea262d3a60fb4d00f0"
+  integrity sha512-iRoBWnkMsGxrSxfXUXWpVfxpGjTUipI60+w9vO/QdXH02wFrS4k/jcZ4OSlPJMxpU/Lv5kgvgjvcJ22/SJpRow==
   dependencies:
     "@expo/config-types" "^40.0.0-beta.2"
     "@expo/configure-splash-screen" "0.3.4"
@@ -1121,15 +1121,15 @@
   integrity sha512-t9pHCQMXOP4nwd7LGXuHkLlFy0JdfknRSCAeVF4Kw2/y+5OBbR9hW9ZVnetpBf0kORrekgiI7K/qDaa3hh5+Qg==
 
 "@expo/config@^3.3.18":
-  version "3.3.34"
-  resolved "https://registry.yarnpkg.com/@expo/config/-/config-3.3.34.tgz#ab8cab4c04a406cc92ed483f7a7f071e8e0f3e98"
-  integrity sha512-Yekmn9sIm70vGUwugXlL/jpTQufTJXV7IrYWvFKd4B8ZwdMBFK08NY2XBwvl+jJOVdhmLe+yHc44bCmrEPb6vA==
+  version "3.3.35"
+  resolved "https://registry.yarnpkg.com/@expo/config/-/config-3.3.35.tgz#cc69703b9275fe6d6ef70ce6dcd217fa84d50807"
+  integrity sha512-0jYSYBCge8s9TqvUbky64lWvpdAHKB9V+e4OrKOmxF8MILmBq2fYHiHkywn5VU7OaWiJQJixhrNUEBHWLJm4ig==
   dependencies:
     "@babel/core" "7.9.0"
     "@babel/plugin-proposal-class-properties" "~7.12.13"
     "@babel/preset-env" "~7.12.13"
     "@babel/preset-typescript" "~7.12.13"
-    "@expo/config-plugins" "1.0.24"
+    "@expo/config-plugins" "1.0.25"
     "@expo/config-types" "^40.0.0-beta.2"
     "@expo/json-file" "8.2.28"
     fs-extra "9.0.0"
@@ -1728,6 +1728,16 @@
     strip-ansi "^5.2.0"
     sudo-prompt "^9.0.0"
     wcwidth "^1.0.1"
+
+"@react-native-picker/picker@1.9.2":
+  version "1.9.2"
+  resolved "https://registry.yarnpkg.com/@react-native-picker/picker/-/picker-1.9.2.tgz#c5e35f97d7982d2971ee3d74b1ba8ecf4b716627"
+  integrity sha512-eNMf5uF67CsiJ9SDzofSWKu9Gh2PDyPbCSXuUJ09tkRgcOefDx6DyQnXCOPCd+8vxC1DzJKVAgLy+s425jUIeA==
+
+"@react-native-picker/picker@^1.8.3":
+  version "1.14.0"
+  resolved "https://registry.yarnpkg.com/@react-native-picker/picker/-/picker-1.14.0.tgz#9c3ce0be162239a7a05b994f2bdcf5660b5466b9"
+  integrity sha512-KN/nOSxO64LxYms/8RpdjdIqemqDlxM8glDi4upg40/3JqalmXoHHBQxA0XYdAoL+padSVHAoAS6Ie5zAn8gTw==
 
 "@types/istanbul-lib-coverage@*", "@types/istanbul-lib-coverage@^2.0.0":
   version "2.0.3"
@@ -2825,9 +2835,9 @@ ee-first@1.1.1:
   integrity sha1-WQxhFWsK4vTwJVcyoViyZrxWsh0=
 
 electron-to-chromium@^1.3.649:
-  version "1.3.710"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.710.tgz#b33d316e5d6de92b916e766d8a478d19796ffe11"
-  integrity sha512-b3r0E2o4yc7mNmBeJviejF1rEx49PUBi+2NPa7jHEX3arkAXnVgLhR0YmV8oi6/Qf3HH2a8xzQmCjHNH0IpXWQ==
+  version "1.3.712"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.712.tgz#ae467ffe5f95961c6d41ceefe858fc36eb53b38f"
+  integrity sha512-3kRVibBeCM4vsgoHHGKHmPocLqtFAGTrebXxxtgKs87hNUzXrX2NuS3jnBys7IozCnw7viQlozxKkmty2KNfrw==
 
 emoji-regex@^7.0.1:
   version "7.0.3"
@@ -5243,9 +5253,9 @@ range-parser@~1.2.1:
   integrity sha512-Hrgsx+orqoygnmhFbKaHE6c296J+HTAQXoxEF6gNupROmmGJRoyzfG3ccAveqCBrwr/2yxQ5BVd/GTl5agOwSg==
 
 react-devtools-core@^4.6.0:
-  version "4.10.1"
-  resolved "https://registry.yarnpkg.com/react-devtools-core/-/react-devtools-core-4.10.1.tgz#6d57db291aeac9cc45ef9fb4636dd2ab97490daf"
-  integrity sha512-sXbBjGAWcf9HAblTP/zMtFhGHqxAfIR+GPxONZsSGN9FHnF4635dx1s2LdQWG9rJ+Ehr3nWg+BUAB6P78my5PA==
+  version "4.11.0"
+  resolved "https://registry.yarnpkg.com/react-devtools-core/-/react-devtools-core-4.11.0.tgz#38e92bcfebd7fa6f89f9a29439e30688ef4781b4"
+  integrity sha512-QBbyZv3rodvWvhh2NjXuEk5AehCDNh/3elTi1vL03/Bo8UbeX3bmR3NDlx1YIcZ7hsDjxhT6a1GSuO5PVOR8Ag==
   dependencies:
     shell-quote "^1.6.1"
     ws "^7"
@@ -5269,6 +5279,14 @@ react-is@^17.0.1:
   version "17.0.2"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-17.0.2.tgz#e691d4a8e9c789365655539ab372762b0efb54f0"
   integrity sha512-w2GsyukL62IJnlaff/nRegPQR94C/XXamvMWmSHRJ4y7Ts/4ocGRmTHvOs8PSE6pB3dWOrD/nueuU5sduBsQ4w==
+
+react-native-picker-select@^8.0.4:
+  version "8.0.4"
+  resolved "https://registry.yarnpkg.com/react-native-picker-select/-/react-native-picker-select-8.0.4.tgz#3f7f1f42df69b06e7d2c10338288332a6c40fd10"
+  integrity sha512-orBjPIwBkV5oipyVw263YNMI56f6Kj3p/ejabZoCYYNSG3AiLVVhC2RqsxMgDA7IayyURAW+AlV+mDJyVqLBkg==
+  dependencies:
+    "@react-native-picker/picker" "^1.8.3"
+    lodash.isequal "^4.5.0"
 
 react-native-safe-area-context@3.1.9:
   version "3.1.9"
