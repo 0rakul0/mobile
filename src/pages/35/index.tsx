@@ -1,5 +1,6 @@
-import React,{useState} from 'react';
-import { View, StyleSheet, Text, TouchableOpacity, Image } from 'react-native';
+import React, { useState } from 'react';
+import { View, StyleSheet, Text, TouchableOpacity, Image, ScrollView } from 'react-native';
+import { Picker } from '@react-native-picker/picker'
 
 import rostoMau from '../../grupou_assets/icones/faces_avaliacao/icone_face_1.png';
 import rostoTriste from '../../grupou_assets/icones/faces_avaliacao/icone_face_2.png';
@@ -9,13 +10,13 @@ import rostoFeliz from '../../grupou_assets/icones/faces_avaliacao/icone_face_5.
 
 import avatar from '../../grupou_assets/icones/icone_perfil.png'
 
-
-
 export default function Avaliacao() {
-
-
+    const [skills] = useState(
+        ['Empatia', 'Liderança']
+    );
+    const [skillSelecionada, setSkillSelecionada] = useState([])
     return (
-        <View style={styles.container}>
+        <ScrollView style={styles.container}>
             <Text style={styles.titulo}>AV1 - Gestão do Design </Text>
             <Text style={styles.subtitulo}>Avaliação 360º</Text>
             <Text style={styles.pergunta}>Qual foi a sua satisfação com a atividade?</Text>
@@ -40,20 +41,56 @@ export default function Avaliacao() {
                     <Image source={rostoAlegre} style={styles.imagem} />
                     <Image source={rostoFeliz} style={styles.imagem} />
                 </View>
-                <Text>Selecione 3 soft skills dessa pessoa</Text>
-                
+                <Text style={styles.selecaodeskill}>Selecione 3 soft skills dessa pessoa</Text>
+                <View style={styles.containerPiker}>
+                <Picker
+                    selectedValue={skillSelecionada}
+                    onValueChange={(itemValue) => setSkillSelecionada(itemValue)
+                    }>
+                    {
+                        skills.map(sk => {
+                            return <Picker.Item label={sk} value={sk} />
+                        })
+                    }
+                </Picker>
                 <View>
-
+                </View>
+                </View>
+            </View>
+            <View style={styles.containerImagem}>
+                <View style={styles.avatarNome}>
+                    <Image source={avatar} style={styles.avatar} />
+                    <Text style={styles.nome}>NomeUser</Text>
+                </View>
+                <View style={styles.rostinhos}>
+                    <Image source={rostoMau} style={styles.imagem} />
+                    <Image source={rostoTriste} style={styles.imagem} />
+                    <Image source={rostoNormal} style={styles.imagem} />
+                    <Image source={rostoAlegre} style={styles.imagem} />
+                    <Image source={rostoFeliz} style={styles.imagem} />
+                </View>
+                <Text style={styles.selecaodeskill}>Selecione 3 soft skills dessa pessoa</Text>
+                    <View style={styles.containerPiker}>
+                <Picker
+                    selectedValue={skillSelecionada}
+                    onValueChange={(itemValue) => setSkillSelecionada(itemValue)
+                    }>
+                    {
+                        skills.map(sk => {
+                            return <Picker.Item label={sk} value={sk} />
+                        })
+                    }
+                </Picker>
+                <View>
+                </View>
                 </View>
             </View>
             <View style={styles.blocoConfirmar}>
-
                 <TouchableOpacity style={styles.botaoConfirmar}>
                     <Text style={styles.confirmar}>Confirmar</Text>
                 </TouchableOpacity>
-
             </View>
-        </View>
+        </ScrollView>
 
     )
 }
@@ -66,22 +103,25 @@ const styles = StyleSheet.create({
     },
     titulo: {
         marginTop: 10,
-        fontSize: 35,
+        fontSize: 30,
     },
     subtitulo: {
         marginTop: 10,
-        fontSize: 20,
+        fontSize: 17,
     },
     pergunta: {
-        marginTop: 60,
+        marginTop: 40,
         marginBottom: 20,
-        fontSize: 30,
+        fontSize: 25,
     },
     containerImagem: {
-        backgroundColor: '#ccc'
+        borderWidth: 2,
+        borderRadius: 10,
+        padding: 10,
+        marginBottom:15,
+        borderColor: '#ccc',
     },
     rostinhos: {
-        
         height: 65,
         flexDirection: 'row',
         justifyContent: 'space-between',
@@ -94,6 +134,7 @@ const styles = StyleSheet.create({
         height: 70,
         width: 70,
         borderRadius: 50,
+        marginRight: 10,
         backgroundColor: '#aaa'
     },
     avatarNome: {
@@ -102,18 +143,26 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         height: 100,
         margin: 10,
-        backgroundColor: '#bbb'
     },
     nome: {
         fontSize: 20,
     },
-    blocoConfirmar:{
-        flexDirection:'column',
-        flex:1,
-        alignContent:'center',
-        alignItems:'center',
-        marginTop:20,
-        justifyContent:'flex-end'
+    selecaodeskill: {
+        marginTop: 10,
+        fontSize: 20,
+    },
+    containerPiker:{
+        borderWidth: 1,
+        borderRadius: 10,
+        borderColor: '#ccc'
+    },
+    blocoConfirmar: {
+        flexDirection: 'column',
+        flex: 1,
+        alignContent: 'center',
+        alignItems: 'center',
+        marginTop: 20,
+        justifyContent: 'flex-end'
     },
     botaoConfirmar: {
         alignContent: 'center',

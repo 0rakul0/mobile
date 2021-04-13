@@ -100,11 +100,13 @@ const styles = StyleSheet.create({
 
   porcentagem: {
     fontSize: 50,
-    color: '#40C67F'
+    color: '#40C67F',
+    opacity:0,
   },
   textoPorcentagem: {
     fontSize: 27,
-    color: '#40C67F'
+    color: '#40C67F',
+    opacity:0,
   },
   blocoConfirmar: {
     flexDirection: 'column',
