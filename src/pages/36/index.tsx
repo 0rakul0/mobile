@@ -91,6 +91,37 @@ export default function Grupos() {
                     </View>
                 </View>
 
+                <View style={styles.blocoGrupo}>
+                    <View style={styles.blocoTitulo}>
+                        <View>
+                            <Text style={styles.subTitulo}>Gestão do Desing</Text>
+                            <Text style={styles.textoNota}>AV1</Text>
+                        </View>
+                        <TouchableOpacity>
+                            <View style={styles.outLineBotao}>
+                                <Text style={styles.textoBotao}>
+                                    Ver mais
+                            </Text>
+                            </View>
+                        </TouchableOpacity>
+                    </View>
+                    <View>
+                        <View style={styles.rostos}>
+                            <Image source={milton} style={styles.imagem} />
+                            <Image source={rostoTriste} style={styles.imagem} />
+                            <Image source={rostoNormal} style={styles.imagem} />
+                            <Image source={rostoAlegre} style={styles.imagem} />
+                            <Image source={rostoFeliz} style={styles.imagem} />
+                        </View>
+                        <View>
+                            <Text style={styles.textoTarefas}>Tarefas concluidas</Text>
+                            <View style={styles.blocoExperience}>
+                                <View style={styles.experience}></View>
+                                <Text style={styles.textoExperience}>78%</Text>
+                            </View>
+                        </View>
+                    </View>
+                </View>
                 <View style={styles.blocoRodape}>
                     <View style={styles.rodape}>
                         <Text style={styles.textoRodape}>Contato</Text>
@@ -103,43 +134,43 @@ export default function Grupos() {
                     </View>
                     <View>
                     </View>
-                   
+
                 </View>
                 <View style={styles.blocoMenuRodape}>
-                        <TouchableOpacity>
-                            <View>
-                                <Image source={dashboard} />
-                                <Text>Dashboard</Text>
-                            </View>
-                            </TouchableOpacity>
-                            <TouchableOpacity>
-                            <View>
-                                <Image source={grupos} />
-                                <Text>Grupos</Text>
-                            </View>
-                            
-                            </TouchableOpacity>
-                            <TouchableOpacity>
-                            <View>
-                                <Image source={disciplina} />
-                                <Text>Disciplina</Text>
-                            </View>
-                            
-                            </TouchableOpacity>
-                            <TouchableOpacity>
-                            <View>
-                                <Image source={skills} />
-                                <Text>Skills</Text>
-                            </View>
-                            
-                            </TouchableOpacity>
-                            <TouchableOpacity>
-                            <View>
-                                <Image source={perfil} />
-                                <Text>Perfil</Text>
-                            </View>
-                        </TouchableOpacity>
-                    </View>
+                    <TouchableOpacity>
+                        <View style={styles.blocoImagemTexto}>
+                            <Image source={dashboard} style={styles.imagemMenu} />
+                            <Text style={styles.textoMenu}>Dashboard</Text>
+                        </View>
+                    </TouchableOpacity>
+                    <TouchableOpacity>
+                        <View style={styles.blocoImagemTexto}>
+                            <Image source={grupos} style={styles.imagemMenu} />
+                            <Text style={styles.textoMenu}>Grupos</Text>
+                        </View>
+
+                    </TouchableOpacity>
+                    <TouchableOpacity>
+                        <View style={styles.blocoImagemTexto}>
+                            <Image source={disciplina} style={styles.imagemMenu} />
+                            <Text style={styles.textoMenu}>Disciplina</Text>
+                        </View>
+
+                    </TouchableOpacity>
+                    <TouchableOpacity>
+                        <View style={styles.blocoImagemTexto}>
+                            <Image source={skills} style={styles.imagemMenu} />
+                            <Text style={styles.textoMenu}>Skills</Text>
+                        </View>
+
+                    </TouchableOpacity>
+                    <TouchableOpacity>
+                        <View style={styles.blocoImagemTexto}>
+                            <Image source={perfil} style={styles.imagemMenu} />
+                            <Text style={styles.textoMenu}>Perfil</Text>
+                        </View>
+                    </TouchableOpacity>
+                </View>
             </View>
         </ScrollView>
     )
@@ -211,7 +242,6 @@ const styles = StyleSheet.create({
         alignContent: 'center',
         alignItems: 'center',
         flexDirection: 'row',
-
     },
     experience: {
         width: 300,
@@ -223,39 +253,54 @@ const styles = StyleSheet.create({
         fontSize: 15,
         color: '#f55500',
     },
-    blocoRodape:{
-        alignItems:'center',
-        position:'relative',
-        backgroundColor:'#600411',
-        paddingTop:20,
+    blocoRodape: {
+        alignItems: 'center',
+        position: 'relative',
+        backgroundColor: '#600411',
+        paddingTop: 20,
     },
-    rodape:{
-        alignItems:'center',
-        justifyContent:'center',
-        marginBottom:20,
+    rodape: {
+        alignItems: 'center',
+        justifyContent: 'center',
+        marginBottom: 20,
     },
-    textoRodape:{
-        marginTop:5,
-        fontSize:20,
-        color:'#fff'
+    textoRodape: {
+        marginTop: 5,
+        fontSize: 20,
+        color: '#fff'
     },
-    imagemRede:{
-        width:60,
-        height:60,
-        margin:10,
+    imagemRede: {
+        width: 60,
+        height: 60,
+        margin: 10,
     },
-    blocoImagemRodape:{
-        marginBottom:10,
-        flexDirection:'row',
-        flex:1,
-        justifyContent:'space-between',
+    blocoImagemRodape: {
+        marginBottom: 10,
+        flexDirection: 'row',
+        flex: 1,
+        justifyContent: 'space-between',
     },
-    blocoMenuRodape:{
-        padding:10,
-        backgroundColor:'#63005f',
-        flex:1,
-        flexDirection:'row',
-        justifyContent:'space-between',
+    blocoMenuRodape: {
+        position: 'relative',
+        padding: 10,
+        backgroundColor: '#63005f',
+        flexDirection: 'row',
+        flex: 1,
+        justifyContent: 'space-between',
+    },
+    blocoImagemTexto: {
+        flexDirection: 'column',
+        alignContent: 'center',
+        alignItems: 'center',
+        justifyContent: 'center'
+    },
+    imagemMenu: {
+        width: 35,
+        height: 35,
+    },
+    textoMenu: {
+        fontSize: 13,
+        color: '#ccc'
     }
 
 })
